@@ -53,6 +53,8 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
     private void initView() {
         login_register=(Button)findViewById(R.id.login_register);
         login_register.setOnClickListener(this);
+        login_submit=(Button)findViewById(R.id.login_submit);
+        login_submit.setOnClickListener(this);
     }
 
     @Override
@@ -61,6 +63,10 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.login_register:
                 //注册
                 startActivity(new Intent(SigninActivity.this, RegisterActivity.class));
+                break;
+            case R.id.login_submit:
+                //登录
+                startActivity(new Intent(SigninActivity.this, MainActivity.class));
                 break;
         }
 

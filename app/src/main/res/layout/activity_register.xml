@@ -292,9 +292,9 @@
             android:textSize="@dimen/font_16" />
 
         <TextView
-            android:id="@+id/tv_register_sms_call"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/register_getcode"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_marginRight="16dp"
             android:alpha="0.4"
             android:background="@drawable/bg_register_call_sms"
@@ -304,8 +304,8 @@
             android:paddingRight="6dp"
             android:paddingBottom="4dp"
             android:text="@string/register_sms_hint"
-            android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textColor="#BB0000"
+            android:textSize="15dp"
             tools:ignore="RtlHardcoded" />
     </LinearLayout>
 
