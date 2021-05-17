@@ -24,8 +24,8 @@
         <RadioButton
             android:id="@+id/main_rb_cloud"
             style="@style/tab_menu_item"
-            android:drawableTop="@drawable/cloudpage"
-            android:text="云盘" />
+            android:drawableTop="@drawable/classpage"
+            android:text="分类" />
 
         <RadioButton
             android:id="@+id/main_rb_my"

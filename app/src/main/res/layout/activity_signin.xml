@@ -18,15 +18,15 @@
             android:id="@+id/ly_retrieve_bar"
             layout="@layout/activity_main_login_navigation_bar" />
 
-        <ImageView
-            android:id="@+id/iv_login_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:contentDescription="@null"
-            android:paddingTop="20dp"
-            android:scaleType="centerInside"
-            app:srcCompat="@mipmap/logo" />
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_login_logo"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:contentDescription="@null"-->
+<!--            android:paddingTop="20dp"-->
+<!--            android:scaleType="centerInside"-->
+<!--            app:srcCompat="@mipmap/logo" />-->
 
         <LinearLayout
             android:id="@+id/ll_login_username"
@@ -63,14 +63,15 @@
                 android:background="@null"
                 android:ems="15"
                 android:focusable="true"
-                android:hint="@string/login_input_username_hint"
+                android:hint="手机号"
                 android:imeOptions="actionDone"
-                android:inputType="textPhonetic"
+                android:inputType="phone"
                 android:lines="1"
                 android:maxLines="1"
                 android:minLines="1"
                 android:paddingLeft="4dp"
                 android:paddingRight="4dp"
+                android:text="155535781"
                 android:textColor="#AFFC9D"
                 android:textColorHint="#AFFC9D"
                 android:textCursorDrawable="@null"
@@ -130,7 +131,8 @@
                 android:textColor="#AFFC9D"
                 android:textColorHint="#AFFC9D"
                 android:textCursorDrawable="@null"
-                android:textSize="@dimen/font_16" />
+                android:textSize="@dimen/font_16"
+                android:text="12345678946132"/>
 
             <ImageView
                 android:id="@+id/iv_login_pwd_del"

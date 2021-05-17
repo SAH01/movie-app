@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoviePagerActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView android:id="@+id/movie_img"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:src="@mipmap/head3">
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView android:id="@+id/movie_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="百变小樱"
+                    android:textSize="20dp"
+                    android:textColor="#EEAAFF">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/movie_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9.9分"
+                    android:textColor="#EEAAFF"
+                    android:textSize="20dp"></TextView>
+
+                <TextView android:id="@+id/movie_scorenum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="评价人数：101245"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"></TextView>
+
+
+                <TextView android:id="@+id/movie_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="类型：喜剧 爱情"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"></TextView>
+
+                <TextView android:id="@+id/movie_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="国家地区：中国大陆"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"></TextView>
+
+                <TextView android:id="@+id/movie_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上映时间：2021-01-01"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"></TextView>
+
+                <TextView android:id="@+id/movie_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="语言：日语"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"></TextView>
+
+                <TextView android:id="@+id/movie_timelen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时长：126分钟"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"></TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView android:id="@+id/movie_director"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="导演：大道世知世"
+            android:textSize="18dp">
+        </TextView>
+
+        <TextView android:id="@+id/movie_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主演：木之本樱 雪兔 小可 小狼 梅玲"
+            android:textSize="18dp">
+        </TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:layout_above="@id/main_group"
+            android:background="#EEAAFF" />
+
+        <TextView android:id="@+id/movie_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="简介：
+ 　　孙悟空（周星驰）护送唐三藏（罗家英）去西天取经路上，与牛魔王合谋欲杀害唐三藏，并偷走了月光宝盒，此举使观音萌生将其铲除心思，经唐三藏请求，孙悟空被判五百年后重新投胎做人赎其罪孽。
+
+ 　　五百年后孙悟空化身强盗头头至尊宝。当遇见预谋吃唐僧肉的妖怪姐妹蜘蛛精春三十娘（蓝洁瑛）和白骨精白晶晶（莫文蔚）时，因为五百年前孙悟空曾与白晶晶有过一段恋情，至尊宝与她一见钟情，但因菩提老祖将二人妖怪身份相告，至尊宝仍带领众强盗开始与二妖展开周旋，过程中，白晶晶为救至尊宝打伤春三十娘，自己也中毒受伤，为了救白晶晶，至尊宝去找春三十娘，遭白晶晶误会，绝望自杀，至尊宝开始用月光宝盒以期使时光倒流。
+ "
+            android:textSize="18dp"
+            android:layout_marginTop="10dp">
+        </TextView>
+
+        <View
+            android:id="@+id/div_tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:layout_above="@id/main_group"
+            android:background="#EEAAFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在哪里看："
+            android:textColor="#EEAAFF"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="腾讯视频："
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+            <TextView android:id="@+id/Ten_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="9.5分"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+            <TextView android:id="@+id/Ten_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIP"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="爱奇艺："
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+            <TextView android:id="@+id/Ai_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="9.5分"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+            <TextView android:id="@+id/Ai_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIP"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:layout_above="@id/main_group"
+            android:background="#EEAAFF" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏为："
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#EEAAFF"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button android:id="@+id/movie_want"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="想看"
+                android:textSize="20dp"
+                android:layout_weight="1"></Button>
+
+            <Button android:id="@+id/movie_on"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="在看"
+                android:textSize="20dp"
+                android:layout_weight="1">
+            </Button>
+
+            <Button android:id="@+id/movie_have"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="看过"
+                android:textSize="20dp"
+                android:layout_weight="1">
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

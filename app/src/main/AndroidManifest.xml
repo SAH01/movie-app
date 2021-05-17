@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CloudLibrary">
-        <activity android:name=".xUtils3TestActivity"></activity>
+        <activity android:name=".MovieLikeActivity"></activity>
+        <activity android:name=".MoviePagerActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".SigninActivity">
             <intent-filter>

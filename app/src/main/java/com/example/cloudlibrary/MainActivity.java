@@ -6,11 +6,11 @@ import androidx.viewpager.widget.ViewPager;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
-import com.example.cloudlibrary.Fragment.MyFragmentPagerAdapter;
+import com.example.cloudlibrary.Adapter.MyFragmentPagerAdapter;
 
 public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener,
         ViewPager.OnPageChangeListener {
@@ -36,6 +36,14 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         mAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
         bindViews();
         main_rb_first.setChecked(true);
+        //在Android4.0以后，会发现，只要是写在主线程（就是Activity）中的HTTP请求，运行时都会报错，
+        // 这是因为Android在4.0以后为了防止应用的ANR（Aplication Not Response）异常，
+        // Android这个设计是为了防止网络请求时间过长而导致界面假死的情况发生。
+        //这样做有些卡顿，可以使用线程，但是子线程无法改变view，之后在解决
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
     }
 
     private void bindViews() {
