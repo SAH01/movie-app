@@ -207,6 +207,74 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜狐视频："
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+            <TextView android:id="@+id/So_score_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="9.5分"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+            <TextView android:id="@+id/So_vip_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIP"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1905电影网："
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+            <TextView android:id="@+id/score_1905_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="9.5分"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+            <TextView android:id="@+id/vip_1905_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIP"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+        </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="4px"
@@ -233,14 +301,16 @@
                 android:layout_height="wrap_content"
                 android:text="想看"
                 android:textSize="20dp"
-                android:layout_weight="1"></Button>
+                android:layout_weight="1"
+                android:background="#ffffff"></Button>
 
             <Button android:id="@+id/movie_on_like"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="在看"
                 android:textSize="20dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:background="#ffffff">
             </Button>
 
             <Button android:id="@+id/movie_have_like"
@@ -248,7 +318,8 @@
                 android:layout_height="wrap_content"
                 android:text="看过"
                 android:textSize="20dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:background="#ffffff">
             </Button>
 
         </LinearLayout>
@@ -265,7 +336,9 @@
             android:text="取消收藏"
             android:textSize="20dp"
             android:layout_weight="1"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:background="#F8DDFF"
+            android:textColor="@color/white">
         </Button>
 
     </LinearLayout>

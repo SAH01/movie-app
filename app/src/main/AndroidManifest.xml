@@ -9,13 +9,14 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:usesCleartextTraffic="true"
         android:name=".Application.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="CloudLibrary"
+        android:label="树懒电影"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CloudLibrary">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".MovieLikeActivity"></activity>
         <activity android:name=".MoviePagerActivity" />
         <activity android:name=".RegisterActivity" />

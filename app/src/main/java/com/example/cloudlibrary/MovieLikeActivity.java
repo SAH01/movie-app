@@ -1,11 +1,14 @@
 package com.example.cloudlibrary;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -46,6 +49,10 @@ public class MovieLikeActivity extends AppCompatActivity implements View.OnClick
     TextView Ten_vip_like;
     TextView Ai_score_like;
     TextView Ai_vip_like;
+    TextView So_score_like;
+    TextView So_vip_like;
+    TextView score_1905_like;
+    TextView vip_1905_like;
     Button movie_want_like;
     Button movie_on_like;
     Button movie_have_like;
@@ -62,6 +69,36 @@ public class MovieLikeActivity extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_like);
+        Intent intent=getIntent();
+        usertype=intent.getStringExtra("usertype");
+        movie_want_like=(Button)findViewById(R.id.movie_want_like);
+        movie_on_like=(Button)findViewById(R.id.movie_on_like);
+        movie_have_like=(Button)findViewById(R.id.movie_have_like);
+        if(usertype.equals("想看")){
+            movie_want_like.setBackgroundColor(Color.parseColor("#F8DDFF"));
+            movie_on_like.setBackgroundColor(Color.parseColor("#ffffff"));
+            movie_have_like.setBackgroundColor(Color.parseColor("#ffffff"));
+            movie_want_like.setTextColor(Color.parseColor("#ffffff"));
+            movie_on_like.setTextColor(Color.parseColor("#000000"));
+            movie_have_like.setTextColor(Color.parseColor("#000000"));
+        }
+        if(usertype.equals("在看")){
+            movie_want_like.setBackgroundColor(Color.parseColor("#ffffff"));
+            movie_on_like.setBackgroundColor(Color.parseColor("#F8DDFF"));
+            movie_have_like.setBackgroundColor(Color.parseColor("#ffffff"));
+            movie_want_like.setTextColor(Color.parseColor("#000000"));
+            movie_on_like.setTextColor(Color.parseColor("#ffffff"));
+            movie_have_like.setTextColor(Color.parseColor("#000000"));
+        }
+        if(usertype.equals("看过")){
+            movie_want_like.setBackgroundColor(Color.parseColor("#ffffff"));
+            movie_on_like.setBackgroundColor(Color.parseColor("#ffffff"));
+            movie_have_like.setBackgroundColor(Color.parseColor("#F8DDFF"));
+            movie_want_like.setTextColor(Color.parseColor("#000000"));
+            movie_on_like.setTextColor(Color.parseColor("#000000"));
+            movie_have_like.setTextColor(Color.parseColor("#ffffff"));
+        }
+        movie_remove=(Button)findViewById(R.id.movie_remove);
         movie_title_like=(TextView)findViewById(R.id.movie_title_like);
         movie_star_like=(TextView)findViewById(R.id.movie_star_like);
         movie_director_like=(TextView)findViewById(R.id.movie_director_like);
@@ -78,18 +115,20 @@ public class MovieLikeActivity extends AppCompatActivity implements View.OnClick
         Ten_vip_like=(TextView)findViewById(R.id.Ten_vip_like);
         Ai_score_like=(TextView)findViewById(R.id.Ai_score_like);
         Ai_vip_like=(TextView)findViewById(R.id.Ai_vip_like);
-        movie_want_like=(Button)findViewById(R.id.movie_want_like);
-        movie_on_like=(Button)findViewById(R.id.movie_on_like);
-        movie_have_like=(Button)findViewById(R.id.movie_have_like);
-        movie_remove=(Button)findViewById(R.id.movie_remove);
+        So_score_like=(TextView)findViewById(R.id.So_score_like);
+        So_vip_like=(TextView)findViewById(R.id.So_vip_like);
+        score_1905_like=(TextView)findViewById(R.id.score_1905_like);
+        vip_1905_like=(TextView)findViewById(R.id.vip_1905_like);
         movie_remove.setOnClickListener(this);
         movie_want_like.setOnClickListener(this);
         movie_on_like.setOnClickListener(this);
         movie_have_like.setOnClickListener(this);
-        Intent intent=getIntent();
+        movie_remove.setOnClickListener(this);
+        movie_want_like.setOnClickListener(this);
+        movie_on_like.setOnClickListener(this);
+        movie_have_like.setOnClickListener(this);
         String movie_title_str=intent.getStringExtra("title");
         String movie_scorenum_str=intent.getStringExtra("scorenum");
-        usertype=intent.getStringExtra("usertype");
         set_movie(movie_title_str,movie_scorenum_str);
         SharedPreferences sp=getSharedPreferences("userdata",MODE_PRIVATE);
         userphone=(sp.getString("user_phone",""));
@@ -137,6 +176,21 @@ public class MovieLikeActivity extends AppCompatActivity implements View.OnClick
                     }else{
                         Ai_score_like.setText("无此电影");
                         Ai_vip_like.setText("");
+                    }
+                    if(!array.getString(18).equals("0")){
+                        So_score_like.setText(array.getString(18)+"分");
+                        So_vip_like.setText(array.getString(19 ));
+                    }else{
+                        So_score_like.setText("无此电影");
+                        So_vip_like.setText("");
+                    }
+                    //1905电影网
+                    if(!array.getString(18).equals("0")){
+                        score_1905_like.setText(array.getString(18)+"分");
+                        vip_1905_like.setText(array.getString(19 ));
+                    }else{
+                        score_1905_like.setText("无此电影");
+                        vip_1905_like.setText("");
                     }
                     url=array.getString(9);
                     Bitmap bitmap = getHttpBitmap(url);
@@ -196,16 +250,47 @@ public class MovieLikeActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.movie_want_like:
+                movie_want_like.setBackgroundColor(Color.parseColor("#F8DDFF"));
+                movie_on_like.setBackgroundColor(Color.parseColor("#ffffff"));
+                movie_have_like.setBackgroundColor(Color.parseColor("#ffffff"));
+                movie_want_like.setTextColor(Color.parseColor("#ffffff"));
+                movie_on_like.setTextColor(Color.parseColor("#000000"));
+                movie_have_like.setTextColor(Color.parseColor("#000000"));
                 http_like_trans(userphone,movie_title_like.getText().toString(),usertype,movie_scorenum_like.getText().toString().substring(5),"想看");
                 break;
             case R.id.movie_on_like:
+                movie_want_like.setBackgroundColor(Color.parseColor("#ffffff"));
+                movie_on_like.setBackgroundColor(Color.parseColor("#F8DDFF"));
+                movie_have_like.setBackgroundColor(Color.parseColor("#ffffff"));
+                movie_want_like.setTextColor(Color.parseColor("#000000"));
+                movie_on_like.setTextColor(Color.parseColor("#ffffff"));
+                movie_have_like.setTextColor(Color.parseColor("#000000"));
                 http_like_trans(userphone,movie_title_like.getText().toString(),usertype,movie_scorenum_like.getText().toString().substring(5),"在看");
                 break;
             case R.id.movie_have_like:
+                movie_want_like.setBackgroundColor(Color.parseColor("#ffffff"));
+                movie_on_like.setBackgroundColor(Color.parseColor("#ffffff"));
+                movie_have_like.setBackgroundColor(Color.parseColor("#F8DDFF"));
+                movie_want_like.setTextColor(Color.parseColor("#000000"));
+                movie_on_like.setTextColor(Color.parseColor("#000000"));
+                movie_have_like.setTextColor(Color.parseColor("#ffffff"));
                 http_like_trans(userphone,movie_title_like.getText().toString(),usertype,movie_scorenum_like.getText().toString().substring(5),"看过");
                 break;
             case R.id.movie_remove:
-                MovieRemove(userphone,usertype,movie_title_like.getText().toString(),movie_scorenum_like.getText().toString().substring(5));
+                AlertDialog.Builder builder=new AlertDialog.Builder(this);
+                builder.setTitle("删除").setIcon(R.mipmap.ic_launcher).setMessage("确定要取消收藏吗");
+                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        MovieRemove(userphone,usertype,movie_title_like.getText().toString(),movie_scorenum_like.getText().toString().substring(5));
+                    }
+                }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+                AlertDialog ad=builder.create();
+                ad.show();
                 break;
         }
     }

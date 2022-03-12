@@ -1,7 +1,7 @@
 package com.example.cloudlibrary.Data;
 
 public class AllData {
-    private String url="192.168.43.98";
+    private String url="192.168.43.241";
 
     public AllData(String url) {
         this.url = url;

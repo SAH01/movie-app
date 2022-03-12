@@ -52,6 +52,10 @@ public class MoviePagerActivity extends AppCompatActivity implements View.OnClic
     TextView Ten_vip;
     TextView Ai_score;
     TextView Ai_vip;
+    TextView So_score;
+    TextView So_vip;
+    TextView score_1905;
+    TextView vip_1905;
     Button movie_want;
     Button movie_on;
     Button movie_have;
@@ -82,6 +86,10 @@ public class MoviePagerActivity extends AppCompatActivity implements View.OnClic
         Ten_vip=(TextView)findViewById(R.id.Ten_vip);
         Ai_score=(TextView)findViewById(R.id.Ai_score);
         Ai_vip=(TextView)findViewById(R.id.Ai_vip);
+        So_score=(TextView)findViewById(R.id.So_score);
+        So_vip=(TextView)findViewById(R.id.So_vip);
+        score_1905=(TextView)findViewById(R.id.score_1905);
+        vip_1905=(TextView)findViewById(R.id.vip_1905);
         movie_want=(Button)findViewById(R.id.movie_want);
         movie_on=(Button)findViewById(R.id.movie_on);
         movie_have=(Button)findViewById(R.id.movie_have);
@@ -124,20 +132,37 @@ public class MoviePagerActivity extends AppCompatActivity implements View.OnClic
                     movie_language.setText("语言："+array.getString(8));
                     movie_scorenum.setText("评价人数："+array.getString(10));
                     movie_timelen.setText("时长："+array.getString(11));
+                    //腾讯视频
                     if(!array.getString(12).equals("0")){
                         Ten_score.setText(array.getString(12)+"分");
                         Ten_vip.setText(array.getString(13));
-                        Log.e("TAG",array.getString(12));
                     }else{
                         Ten_score.setText("无此电影");
                         Ten_vip.setText("");
                     }
+                    //爱奇艺
                     if(!array.getString(15).equals("0")){
                         Ai_score.setText(array.getString(15)+"分");
                         Ai_vip.setText(array.getString(16 ));
                     }else{
                         Ai_score.setText("无此电影");
                         Ai_vip.setText("");
+                    }
+                    //搜狐视频
+                    if(!array.getString(18).equals("0")){
+                        So_score.setText(array.getString(18)+"分");
+                        So_vip.setText(array.getString(19 ));
+                    }else{
+                        So_score.setText("无此电影");
+                        So_vip.setText("");
+                    }
+                    //1905电影网
+                    if(!array.getString(18).equals("0")){
+                        score_1905.setText(array.getString(18)+"分");
+                        vip_1905.setText(array.getString(19 ));
+                    }else{
+                        score_1905.setText("无此电影");
+                        vip_1905.setText("");
                     }
                     url=array.getString(9);
                     Bitmap bitmap = getHttpBitmap(url);

@@ -28,89 +28,103 @@
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="全部"></RadioButton>
+                        android:text="全部   "
+                        android:textSize="20dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/type_1"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="剧情"></RadioButton>
+                        android:text="剧情  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/type_2"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="喜剧"></RadioButton>
+                        android:text="喜剧  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/type_3"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="动作"></RadioButton>
+                        android:text="动作  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/type_4"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="爱情"></RadioButton>
+                        android:text="爱情  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/type_5"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="科幻"></RadioButton>
+                        android:text="科幻  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/type_6"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="动画"></RadioButton>
+                        android:text="动画  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/type_7"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="悬疑"></RadioButton>
+                        android:text="悬疑  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/type_8"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="惊悚"></RadioButton>
+                        android:text="惊悚  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/type_10"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="恐怖"></RadioButton>
+                        android:text="恐怖  "
+                        android:textSize="18dp"></RadioButton>
                     <RadioButton
                         android:id="@+id/type_11"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="武侠"></RadioButton>
+                        android:text="武侠  "
+                        android:textSize="18dp"></RadioButton>
                     <RadioButton
                         android:id="@+id/type_12"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="历史"></RadioButton>
+                        android:text="历史  "
+                        android:textSize="18dp"></RadioButton>
                     <RadioButton
                         android:id="@+id/type_13"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="战争"></RadioButton>
+                        android:text="战争  "
+                        android:textSize="18dp"></RadioButton>
                     <RadioButton
                         android:id="@+id/type_14"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="冒险"></RadioButton>
+                        android:text="冒险  "
+                        android:textSize="18dp"></RadioButton>
 
 
                 </com.example.cloudlibrary.tools.FlowRadioGroup>
@@ -119,7 +133,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="2px"
                     android:layout_above="@id/main_group"
-                    android:background="#EEAAFF" />
+                    android:background="#EEAAFF"
+                    />
 
                 <com.example.cloudlibrary.tools.FlowRadioGroup
                     android:id="@+id/date_group"
@@ -133,65 +148,75 @@
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="全部"></RadioButton>
+                        android:text="全部   "
+                        android:textSize="20dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/date_1"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="2021"></RadioButton>
+                        android:text="2021  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/date_2"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="2020"></RadioButton>
+                        android:text="2020  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/date_3"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="2019"></RadioButton>
+                        android:text="2019  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/date_4"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="2018"></RadioButton>
+                        android:text="2018  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/date_5"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="2017"></RadioButton>
+                        android:text="2017  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/date_6"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="2016"></RadioButton>
+                        android:text="2016  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/date_7"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="2015"></RadioButton>
+                        android:text="2015  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/date_8"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="2014"></RadioButton>
+                        android:text="2014  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/date_9"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="2013"></RadioButton>
+                        android:text="2013  "
+                        android:textSize="18dp"></RadioButton>
 
 
                 </com.example.cloudlibrary.tools.FlowRadioGroup>
@@ -214,65 +239,75 @@
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="全部"></RadioButton>
+                        android:text="全部   "
+                        android:textSize="20dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/area_1"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="中国"></RadioButton>
+                        android:text="中国  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/area_2"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="美国"></RadioButton>
+                        android:text="美国  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/area_3"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="日本"></RadioButton>
+                        android:text="日本  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/area_4"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="香港"></RadioButton>
+                        android:text="香港  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/area_5"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="台湾"></RadioButton>
+                        android:text="台湾  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/area_6"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="法国"></RadioButton>
+                        android:text="法国  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton android:id="@+id/area_7"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
                         style="@style/tab_menu_type"
-                        android:text="德国"></RadioButton>
+                        android:text="德国  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/area_8"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="英国"></RadioButton>
+                        android:text="英国  "
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/area_9"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="10dp"
-                        android:text="印度"></RadioButton>
+                        android:text="印度"
+                        android:textSize="18dp"></RadioButton>
 
 
                 </com.example.cloudlibrary.tools.FlowRadioGroup>
@@ -295,21 +330,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         style="@style/tab_menu_type"
-                        android:text="最热门"></RadioButton>
+                        android:text="最热门"
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/first_2"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="最近更新"></RadioButton>
+                        android:text="最近更新"
+                        android:textSize="18dp"></RadioButton>
 
                     <RadioButton
                         android:id="@+id/first_3"
                         style="@style/tab_menu_type"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="评分最高"></RadioButton>
+                        android:text="评分最高"
+                        android:textSize="18dp"></RadioButton>
 
                 </RadioGroup>
 
@@ -335,14 +373,18 @@
                         android:layout_height="wrap_content"
                         android:text="上一页"
                         android:textSize="20dp"
-                        android:layout_weight="1"></Button>
+                        android:layout_weight="1"
+                        android:background="#F8DDFF"
+                        android:textColor="@color/white"></Button>
 
                     <Button android:id="@+id/more_show"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="下一页"
                         android:textSize="20dp"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:background="#F8DDFF"
+                        android:textColor="@color/white">
                     </Button>
 
                 </LinearLayout>

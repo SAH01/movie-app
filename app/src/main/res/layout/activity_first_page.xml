@@ -3,11 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ListView android:id="@+id/first_random_show"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText android:id="@+id/search_input"
+            android:layout_width="300dp"
+            android:layout_height="50dip"
+            android:background="@drawable/bg_edittext_selector"
+            android:hint="搜索电影名或主演"
+            android:padding="10dip"
+            android:singleLine="true"
+            android:textColorHint="#AAAAAA"
+            android:textSize="18dip" />
+
+        <Button android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索"
+            android:textSize="20dp"
+            android:background="#F8DDFF"
+            android:textColor="@color/white"></Button>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/main_group"
+        android:background="#EEAAFF" />
+
+
+    <ListView
+        android:id="@+id/search_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
 
 
 </LinearLayout>
